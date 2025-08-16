@@ -2,7 +2,7 @@
 
 **Name:** John Russel Regalado  
 **Course/Year:** BS Information Systems 3rd Year  
-**Fun Fact:** I can solve a Rubik’s cube in under one minute.  
+**Fun Fact:** I know basic ASL (American Sign Language)
 
 ---
 

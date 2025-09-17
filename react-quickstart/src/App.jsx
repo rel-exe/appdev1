@@ -14,6 +14,13 @@ function App() {
     age: 20,
   }
 
+  const favoriteFood = [
+    "Doughnut",
+    "Mushroom",
+    "Chocolate",
+    "Ice Cream"
+  ]
+
     let conditional;
   if (user.age >= 18) {
     conditional = <p>You are an adult.</p>;
@@ -44,6 +51,15 @@ function App() {
 
       {conditional}
       
+      <section className="favorite-foods">
+        <h2>Favorite Foods</h2>
+        <ul>
+          {favoriteFood.map((food, index) => (
+            <li key={index}>{food}</li>
+          ))}
+        </ul>
+      </section>
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

@@ -65,3 +65,21 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #50c878;
 }
+
+.favorite-foods {
+  background-color: #e6ffed;
+  border: 1px solid #b2f5ea;
+  padding: 1rem;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.favorite-foods ul {
+  padding-left: 20px;
+  color: #50c878;
+}
+
+.favorite-foods h2 {
+   color: #50c878;
+}

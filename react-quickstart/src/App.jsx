@@ -9,6 +9,10 @@ function Greeting({ name }) {
 
 function App() {
   const [count, setCount] = useState(0)
+  const user = {
+    firstName: 'Lynne',
+    age: 20,
+  }
 
   return (
     <>
@@ -24,6 +28,12 @@ function App() {
       <Greeting name="lynne" />
 
       <h1 className="title">This is react-quickstart</h1>
+
+       <section className="user-profile">
+        <h2>User Profile</h2>
+        <p>Name: {user.firstName} {user.lastName}</p>
+        <p>Age: {user.age}</p>
+      </section>
       
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

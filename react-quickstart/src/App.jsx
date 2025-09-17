@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function Greeting({ name }) {
-  return <h1>Hello, {name}!</h1>;
+  return <h1 className="greeting">Hello, {name}!</h1>;
 }
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
 
       <Greeting name="lynne" />
 
-      <h1>This is react-quickstart</h1>
+      <h1 className="title">This is react-quickstart</h1>
+      
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

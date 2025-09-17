@@ -14,6 +14,13 @@ function App() {
     age: 20,
   }
 
+    let conditional;
+  if (user.age >= 18) {
+    conditional = <p>You are an adult.</p>;
+  } else {
+    conditional = <p>You are a minor.</p>;
+  }
+
   return (
     <>
       <div>
@@ -31,9 +38,11 @@ function App() {
 
        <section className="user-profile">
         <h2>User Profile</h2>
-        <p>Name: {user.firstName} {user.lastName}</p>
+        <p>Name: {user.firstName}</p>
         <p>Age: {user.age}</p>
       </section>
+
+      {conditional}
       
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

@@ -19,8 +19,25 @@ function MyButton() {
   );
 }
 
+// Added for sharing data between components
+function NameForm({ name, setName }) {
+  return (
+    <input
+      type="text"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+      placeholder="Enter your name"
+    />
+  );
+}
+
+function SharedGreeting({ name }) {
+  return <p>Hello, {name ? name : 'stranger'}!</p>;
+}
+
 function App() {
   const [count, setCount] = useState(0);
+  const [sharedName, setSharedName] = useState('');
 
   const user = {
     firstName: 'Lynne',
@@ -86,6 +103,12 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+
+      <section className="shared-data">
+        <h2>Sharing data between components</h2>
+        <NameForm name={sharedName} setName={setSharedName} />
+        <SharedGreeting name={sharedName} />
+      </section>
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

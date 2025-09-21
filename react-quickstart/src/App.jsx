@@ -7,21 +7,34 @@ function Greeting({ name }) {
   return <h1 className="greeting">Hello, {name}!</h1>;
 }
 
+function MyButton() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
   const user = {
     firstName: 'Lynne',
     age: 20,
-  }
+  };
 
   const favoriteFood = [
     "Doughnut",
     "Mushroom",
     "Chocolate",
     "Ice Cream"
-  ]
+  ];
 
-    let conditional;
+  let conditional;
   if (user.age >= 18) {
     conditional = <p>You are an adult.</p>;
   } else {
@@ -43,14 +56,14 @@ function App() {
 
       <h1 className="title">This is react-quickstart</h1>
 
-       <section className="user-profile">
+      <section className="user-profile">
         <h2>User Profile</h2>
         <p>Name: {user.firstName}</p>
         <p>Age: {user.age}</p>
       </section>
 
       {conditional}
-      
+
       <section className="favorite-foods">
         <h2>Favorite Foods</h2>
         <ul>
@@ -58,6 +71,11 @@ function App() {
             <li key={index}>{food}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="my-button">
+        <h2>responding to events</h2>
+        <MyButton />
       </section>
 
       <div className="card">
@@ -68,11 +86,12 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

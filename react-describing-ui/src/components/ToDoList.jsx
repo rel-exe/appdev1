@@ -1,4 +1,4 @@
-export default function TodoList() {
+function ToDoList() {
   return (
     <>
       <h1>Hedy Lamarr's Todos</h1>
@@ -13,5 +13,6 @@ export default function TodoList() {
         <li>Improve spectrum technology</li>
       </ul>
     </>
-  );
+  )
 }
+export default ToDoList

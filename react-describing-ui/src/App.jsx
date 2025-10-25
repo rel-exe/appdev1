@@ -1,22 +1,24 @@
-import Item from './components/Item.jsx';
-export default function PackingList() {
+import { people } from './data/data.js';
+import { getImageUrl } from './utility/utils.js';
+
+export default function List() {
+  const listItems = people.map(person =>
+    <li key={person.id}>
+      <img
+        src={getImageUrl(person)}
+        alt={person.name}
+      />
+      <p>
+        <b>{person.name}:</b>
+        {' ' + person.profession + ' '}
+        known for {person.accomplishment}
+      </p>
+    </li>
+  );
   return (
-    <section>
-      <h1>Sally Ride's Packing List</h1>
-      <ul>
-        <Item
-          isPacked={true}
-          name="Space suit"
-        />
-        <Item
-          isPacked={true}
-          name="Helmet with a golden leaf"
-        />
-        <Item
-          isPacked={false}
-          name="Photo of Tam"
-        />
-      </ul>
-    </section>
+    <article>
+      <h1>Scientists</h1>
+      <ul>{listItems}</ul>
+    </article>
   );
 }

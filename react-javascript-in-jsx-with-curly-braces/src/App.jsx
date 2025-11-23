@@ -1,9 +1,18 @@
-export default function Avatar() {
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Avatar from './components/Avatar'
+import TodoList from './components/TodoList'
+
+
+function App() {
   return (
-    <img
-      className="avatar"
-      src="https://i.imgur.com/7vQD0fPs.jpg"
-      alt="Gregorio Y. Zara"
-    />
-  );
+    <>
+      <Avatar/>
+      <TodoList/>
+    </>
+  )
 }
+
+export default App
